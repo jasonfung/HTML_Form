@@ -1,0 +1,43 @@
+/* Set width of body to 500px and center it */
+body { 
+	width: 500px; 
+	margin: auto; 
+}
+
+/* Set the font of legend to bold */
+legend { 
+	font-weight:bold; 
+}	 
+
+/* Align the text in the label text from the right, set width of label to 150px */
+label { 
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+}
+
+/* Set the width of province select box to 215px, vertically align the text to middle of select box */
+#province { 
+	width: 215px; 
+	vertical-align: middle;
+} 
+
+/* Set the width of graddate input box to 210px */
+#graddate { 
+	width: 210px; 
+} 
+
+/* Set the width of Worked Year input box to 215px */
+#WorkedYear { 
+	width: 215px; 
+} 
+
+/* Center the submit and clear buttons */
+#submitandclear { 
+	text-align: center; 
+}
+
+/* Vertically align the text to middle of Job Duty input box */
+#JobDuty { 
+	vertical-align: middle;
+}

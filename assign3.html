@@ -1,0 +1,115 @@
+<!--INT222 Assignment 3-->
+<!--Name: Ka Yee Jason Fung   Student no: 051640126-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=utf-8>
+<title> Coop Program Application Form </title>
+<link rel="stylesheet" type="a3.css" href="a3.css"/>
+<script type="text/javascript" src="a3.js"></script>
+</head>
+<body>  
+	<br>
+	<img src="http://www.senecacollege.ca/images/logo.png" width="30%" height="30%"/>
+	<header>
+    <h3>Coop Program Application Form</h3>
+    </header>  
+	<p>Required fields are followed by *.</p>
+	<form id='form1' method='post' action='http://formpost.azurewebsites.net/home/test' onsubmit="return validate(this)">
+	
+	<!--Basic Information-->
+	<fieldset>
+        <legend>Basic Information</legend>
+        <p><label for=FullName>Full Name:</label>
+            <input name="Full Name" id=FullName autofocus placeholder='Your Name' required size=30>*</p>
+		<p><label for=StudentID>Student ID:</label> 
+            <input name="Student ID" id=StudentID value="" placeholder='Your Student ID' required size=30>*</p>		
+		<p><label for=LearnID>Learn ID:</label>
+            <input name="Learn ID" id=LearnID placeholder='Your Learn ID' required size=30>*</p>		
+        <input type=hidden name=senecaemail id=senecaemail>		
+		<p><label for=altemail>Alternative email:</label>
+            <input type=email name="Alternative email" id=altemail size=30></p>			
+		<p><label for=phonenumber>Phone Number:</label>
+            <input type=tel name="Phone Number" id=phonenumber placeholder='Your Phone Number' required size=30>*</p>		
+		<p><label for=address>Address:</label>
+            <input name="Address" id=address placeholder='Your Address' required size=30>*</p>		
+		<p><label for=city>City:</label>
+            <input name="City" id=city placeholder='Your City' required size=30>*</p>			
+		<p><label for=province>Province:</label>  
+            <select name="Province" id=province size=4 required>
+				<optgroup label="Provinces">
+                <option value="Alberta">Alberta</option>
+                <option value="British Columbia">British Columbia</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="New Brunswick">New Brunswick</option>
+                <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                <option value="Nova Scotia">Nova Scotia</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Prince Edward Island">Prince Edward Island</option>
+				<option value="Quebec">Quebec</option>
+				<option value="Saskatchewan">Saskatchewan</option>
+				</optgroup>
+				<optgroup label="Territories">
+				<option value="Northwest Territories">Northwest Territories</option>
+				<option value="Nunavut">Nunavut</option>
+				<option value="Yukon">Yukon</option>
+				</optgroup>
+            </select>*</p>
+	</fieldset>
+	<br><br>
+		
+	<!--Education-->
+	<fieldset>
+		<legend>Education</legend>
+		<p><label for=School>School:</label>  
+            <input name="School" id=School placeholder='Your School' required size=30>*</p>	
+		<p><label for=Program>Program:</label> 
+            <input name="Program" id=Program placeholder='Your Program' required size=30>*</p>	
+		<p><label for=EducationLevel>Education Level:</label>
+        <input list="education" name="Education Level" size=30>
+        <datalist id="education">
+        <option value="Technical Diploma">
+        <option value="College Diploma">
+        <option value="Bachelor's Degree">
+        <option value="Master's Degree">
+        <option value="Others">
+        </datalist></p>	
+		<p><label for=EducationStatus>Education Status:</label>      
+        <input type=radio name="Education Status" value="Graduated">Graduated<br>
+		<label></label>
+        <input type=radio name="Education Status" value="Current Enrolled">Currently enrolled<br>
+		<label></label>
+        <input type=radio name="Education Status" value="Did Not Graduate">Did not graduate
+        </p>
+		<p><label for=graddate>Graduation Date:</label>  
+		<input type="date" name="Graduation Date" id="graddate">
+		</p>
+	</fieldset>
+	<br><br>
+		
+	<!--Work Experience-->
+	<fieldset>
+		<legend>Work Experience</legend>
+		<p><label for=Employer>Employer:</label> 
+            <input name="Employer" id=Employer size=30></p>
+		<p><label for=JobTitle>Job Title:</label> 
+            <input name="Job Title" id=JobTitle size=30></p>
+		<p><label for=JobDuty>Job Duty:</label>
+			<textarea name="Job Duty" id=JobDuty cols=24 rows=8>Please enter your job duty here. 
+			</textarea></p>	
+		<p><label for=WorkedYear>Worked Year:</label>    
+        <input type="number" name="Worked Year" id="WorkedYear" min="0" max="20"></p>  
+		</fieldset><br><br>
+		
+		<fieldset>
+		<legend>Attachments</legend>
+        <p><label for=tbFile>Select A File:</label>
+           <input type=file name="Select A File" id=tbFile multiple></p>
+	</fieldset>
+	
+	<!--Submit and Clear Buttons-->	
+		<p id="submitandclear"><input type="submit" value="Submit"/> &nbsp; &nbsp;
+        <input type ="reset" value = " Clear "/> </p>
+    </form>
+</body>
+</html>
